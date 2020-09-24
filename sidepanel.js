@@ -82,8 +82,6 @@ module.exports = function(app){
 
     $(function(){
         $('body').on('click','.sidepanel',function(e){
-            if(!$(e.target).attr('href'))
-                e.preventDefault();
             if ($(e.target).hasClass('sidepanel__backdrop')) {
                 $(this).sidepanel('get').close();
             } else if($(e.target).hasClass('sidepanel__close')){
