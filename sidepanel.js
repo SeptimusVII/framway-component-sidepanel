@@ -60,7 +60,7 @@ module.exports = function(app){
 
     Sidepanel.prototype.close = function(){
         var panel = this;
-        $('html').removeClass('overflow-hidden');
+        $('html').removeClass('no-scroll');
         panel.$el.removeClass('active');
         panel.isOpen = false;
         if(panel.onClose)
@@ -71,7 +71,8 @@ module.exports = function(app){
     Sidepanel.prototype.open = function(){
         var panel = this;
         $.each(app.components_active.sidepanel.filter(function(item){return !Object.is(item,panel);}),function(){ this.close(); });
-        $('html').addClass('overflow-hidden');
+        if (document.querySelector('html').scrollHeight > viewport.height) 
+            $('html').addClass('no-scroll');
         panel.onResize();
         panel.$el.addClass('active');
         panel.isOpen = true;
