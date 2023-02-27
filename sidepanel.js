@@ -71,8 +71,8 @@ module.exports = function(app){
     Sidepanel.prototype.open = function(){
         var panel = this;
         $.each(app.components_active.sidepanel.filter(function(item){return !Object.is(item,panel);}),function(){ this.close(); });
-        if (document.querySelector('html').scrollHeight > viewport.height) 
-            $('html').addClass('no-scroll');
+        // if (document.querySelector('html').scrollHeight > viewport.height) 
+            // $('html').addClass('no-scroll');
         panel.onResize();
         panel.$el.addClass('active');
         panel.isOpen = true;
