@@ -1,9 +1,9 @@
-.sidepanel{ position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 100; background: none; pointer-events: none;  opacity: 0; transition: opacity 0.3s; transition-delay: 0.3s; overflow: auto; overflow-x: hidden;
+.sidepanel{ position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 100; background: none; pointer-events: none;  opacity: 0; transition: opacity 0.3s; transition-delay: 0.3s; overflow: hidden;
   &:not(.active) *{pointer-events: none !important;}
   &.active{opacity: 1; pointer-events: all; transition-delay: 0s;}
 }
-.sidepanel__backdrop{display: block;height: 100%;width: 100%;position: absolute; top: 0;left: 0; overflow: hidden; z-index: 1; background: rgba(#000,0.6);}
-.sidepanel__content{ padding: 2.5rem; transition: transform 0.6s; transform: translate3d(0,0,0);position: absolute; z-index: 2;
+.sidepanel__backdrop{display: block;height: 100%;width: 100%;position: fixed; top: 0;left: 0; overflow: hidden; z-index: 1; background: rgba(#000,0.6);}
+.sidepanel__content{ padding: 2.5rem; transition: transform 0.6s; transform: translate3d(0,0,0);position: absolute; z-index: 2; max-height: 100vh; overflow: auto;
   &:is(:not([class*="bg-"])){background-color: body(background);}
   &:where([class*=bg-]:not([class*=bg--]):not([class*=btn-])){padding: 2.5rem; }
   &:not([class*="from--"]){@extend .from--left;}
