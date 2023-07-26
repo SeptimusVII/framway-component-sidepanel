@@ -1,23 +1,14 @@
-<a href="" class="btn" data-sidepanel="customPanel1">Open panel from left</a>
+<span class="btn" data-sidepanel="customPanel1">Open panel from left</span>
 <div class="sidepanel" data-name="customPanel1" data-width="50vw" data-bg="" data-direction="" data-openAuto="" data-openDelay="">
-  <p class="ipsum" data-nb="1"></p>
-  <a href="" class="btn" data-sidepanel="customPanel2">Open panel from top</a>
-</div>
-
-<a href="" class="btn" data-sidepanel="customPanel2">Open panel from top</a>
-<div class="sidepanel" data-name="customPanel2" data-width="" data-bg="info" data-direction="top" data-openAuto="" data-openDelay="">
   <p class="ipsum" data-nb="2"></p>
-  <a href="" class="btn" data-sidepanel="customPanel3">Open panel from right</a>
+  <a href="" class="btn" data-sidepanel="customPanel2">Open panel</a>
 </div>
-
-<a href="" class="btn" data-sidepanel="customPanel3">Open panel from right</a>
-<div class="sidepanel" data-name="customPanel3" data-width="50vw" data-bg="warning" data-direction="right" data-openAuto="" data-openDelay="">
-  <p class="ipsum" data-nb="3"></p>
-  <a href="" class="btn" data-sidepanel="customPanel4">Open panel from bottom</a>
-</div>
-
-<a href="" class="btn" data-sidepanel="customPanel4">Open panel from bottom</a>
-<div class="sidepanel" data-name="customPanel4" data-width="" data-bg="error" data-direction="bottom" data-openAuto="" data-openDelay="">
-  <p class="ipsum" data-nb="4"></p>
-  <a href="" class="btn" data-sidepanel="customPanel1">Open panel from left</a>
-</div>
+<constructor component="sidepanel">
+  <field type="separator" label="Miscs"></field>
+  <field type="text" label="Width" target="data-width"  value="50vw" helper="Set panel's optimal width"></field>
+  <field type="select" label="Background" target="data-bg" values="#colors" labels="#colors" selected="" helper="Change the panel's background color"></field>
+  <field type="select" label="Opening direction" target="data-direction" values="left,right,top,bottom" labels="Left,Right,Top,Bottom" selected="" helper="define the direction from which the panel open from"></field>
+  <field type="empty"></field>
+  <field type="checkbox" label="Auto opening" target="data-openAuto" selected="" helper="If checked, the panel will open automatically"></field>
+  <field type="text" label="Delay" target="data-opendelay"  value="" helper="Add a delay (in ms) on the auto-opening feature"></field>
+</constructor>
