@@ -2,8 +2,8 @@ module.exports = function(app){
     var Sidepanel = Object.getPrototypeOf(app).Sidepanel = new app.Component("sidepanel");
     //Sidepanel.debug = true;
     Sidepanel.createdAt      = "2.0.0";
-    Sidepanel.lastUpdate     = "2.4.0";
-    Sidepanel.version        = "1.1.1";
+    Sidepanel.lastUpdate     = "2.5.1";
+    Sidepanel.version        = "1.1.2";
     // Sidepanel.factoryExclude = true;
     // Sidepanel.loadingMsg     = "This message will display in the console when component will be loaded.";
     // Sidepanel.requires       = [];
@@ -93,7 +93,7 @@ module.exports = function(app){
         $('body').on('click','*[data-sidepanel]',function(e){
             e.preventDefault();
             if($('.sidepanel[data-name="'+$(this).data('sidepanel')+'"]').length)
-                $('.sidepanel[data-name="'+$(this).data('sidepanel')+'"]').sidepanel('get').open();
+                $('.sidepanel[data-name="'+$(this).data('sidepanel')+'"]').first().sidepanel('get').open();
         });
 
     });
