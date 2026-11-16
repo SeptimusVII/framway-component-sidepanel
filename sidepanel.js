@@ -7,7 +7,7 @@ module.exports = function(){
             this.version = "2.0.0";
             this.tpl = super.tpl.replace('modal','sidepanel');
             this.tpl = this.tpl.replace('data-sidepanel=""','data-sidepanel="left"');
-            this.describe();
+            // this.describe();
         }
         onCreate(){
             this.sidepanel = this.sidepanel ?? this.getData('sidepanel','left');
